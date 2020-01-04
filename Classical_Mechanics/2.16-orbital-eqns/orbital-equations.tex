@@ -1,0 +1,53 @@
+
+In the previous section, the radial equation was described as,
+
+\begin{equation*}
+    \mu \ddot{r} = -\frac{d}{dr}[U(r) + U_{cf}(r)] - \frac{d}{dr} U_{eff}(r)
+\end{equation*}
+
+\noindent where $U_{eff}(r)$ is the effective potential energy, or the sum of the actual potential energy and the centrifugal potential: $U_{eff}(r) = U(r) + \frac{\ell^2}{2 \mu r^2}$. This description is nice but it gives $r$ as a function of $t$ when we would really like to know it as a function of $\phi$, allowing us to map the orbital path given any polar angle (from positive x-axis). Rewriting the radial equation in terms of forces,
+
+\begin{equation*}
+    \mu \ddot{r} = F(r) + \frac{\ell^2}{\mu r^3}
+\end{equation*}
+
+\noindent where $F(r) = -\frac{dU}{dr}$ is the actual central force and the second term is the centrifugal force.
+
+The trick to rewriting this equation in terms of $\phi$ is substituting $u = \frac{1}{r}$ and the differential operator $\frac{d}{dt}$ in terms of $\frac{d}{d\phi}$ using the chain rule:
+
+\begin{equation*}
+    \frac{d}{dt} = \frac{d\phi}{dt} \frac{d}{d\phi} = \dot{\phi} \frac{d}{d\phi}.
+\end{equation*}
+
+\noindent We know that angular momentum $\ell = \mu r^2 \dot{\phi}$, so rearranging to solve for $\dot{\phi}$, plugging this into our $\frac{d}{dt}$ equation above, and replacing $r$ with $\frac{1}{u}$,
+
+\begin{equation*}
+    \frac{\ell}{\mu r^2} \frac{d}{d\phi} = \frac{\ell u^2}{\mu} \frac{d}{d\phi}.
+\end{equation*}
+
+Heading back over to our radial equation, we want to find the second derivative of $r$ and use it to replace the $\ddot{r}$ on the left of the equation. This is done as follows:
+
+\begin{equation*}
+    \dot{r} = \frac{d}{dt}(r) = \frac{\ell u^2}{\mu} \frac{d}{d\phi} (\frac{1}{u}) = \frac{\ell}{\mu} \frac{du}{d\phi}.
+\end{equation*}
+
+Then the second derivative, 
+
+\begin{equation*}
+    \ddot{r} = \frac{d}{dt}(\dot{r}) = \frac{\ell u^2}{\mu} \frac{d}{d\phi} (\frac{\ell}{\mu} \frac{du}{d\phi}) = \frac{\ell^2 u^2}{\mu^2} \frac{d^2u}{d\phi^2}.
+\end{equation*}
+
+Substituting this back into the radial equation, 
+
+\begin{equation*}
+    \mu \ddot{r} = \frac{\ell^2 u^2}{\mu} \frac{d^2u}{d\phi^2} = F(r) + \frac{\ell^2}{\mu r^3}
+\end{equation*}
+
+Which can be rewritten as,
+
+\begin{equation}
+    u''(\phi) = -u(\phi) - \frac{u}{\ell^2 u(\phi)^2}F(r).
+    \label{eqn:radial_diff_equation}
+\end{equation}
+
+Equation \ref{eqn:radial_diff_equation} is a differential equation for the new variable $u(\phi)$. If it is solved, then we can immediately write $r = 1/u$. The most prominent case study for central forces ($F(r)$ in the above equation) is the inverse-square law previously mentioned. This can be solved to find the resulting orbits of that law are conic sections - namely, ellipses, parabolas, or hyperbolas. 

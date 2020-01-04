@@ -1,0 +1,28 @@
+Potential energies are found only with special forces called {\itshape conservative forces}. These forces have two stipulations: it is {\bfseries only} dependent on the objects position $\vec{r}$ (such as gravity or the electrostatic force, not resistance forces, magnetic force, or time-varying fields) and the works done along all paths between any two points (1 $\rightarrow$ 2) are equal.
+
+The potential energy ($PE$ or $U(\vec{r})$) is defined as minus th work done by a fore $\vec{F}$ if the particle moves from point $P_1$ to $P_2$.
+
+\begin{equation*}
+    U(\vec{r}) - -W(P_1 \rightarrow P_2)
+\end{equation*}
+
+A conservative force gives the useful conservation of mechanical energy theorem of a particle: $E_{tot} = T + U$. This theorem extends to several conservative forces acting on a single particle (i.e. a box hanging by spring on the ceiling). The result is simply: $E = T + U_1 + U_2 + \dotsc + U_n$ for $n$ acting conservative forces.
+
+If non-conservative forces are involved, we can cast the W-E theorem as usual for the conservative forces and implement the change in energy from the non-conservative forces. An example of this is a block sliding down and incline subject to a non-conservative friction force as well as the conservative gravitational force.
+
+We saw the potential energy $U(\vec{r})$ mathematically represented as a integral of a force $\vec{F}(\vec{r)}$. This suggest we can write $U(\vec{r})$ as a derivative of $\vec{F}(\vec{r})$. Of course we can, but don't forget $\vec{F}$ is a vector and $U$ is a scalar meaning this requires vector calculus!
+
+Skipping over a large amount of steps for brevity, conservative forces in terms of potential energy is,
+
+\begin{equation*}
+    \vec{F} = - \nabla U = -\frac{\partial U}{\partial x} \hat{x} -\frac{\partial U}{\partial y} \hat{y} -\frac{\partial U}{\partial z} \hat{z}
+\end{equation*}
+
+How do you tell that the work done by a force is independent of path? Stokes theorem:
+
+\begin{equation*}
+    \nabla \times \vec{F} = 0.
+\end{equation*}
+
+\noindent This is called "the curl of $\vec{F}$. This should be true for all points. 
+
